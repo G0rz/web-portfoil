@@ -1,6 +1,4 @@
-import {createClient} from "@/utils/supabase/browser-client";
-
-const supabase = createClient();
+import {supabase} from "@/utils/supabase/browser-client";
 
 export const getSkills = async () => {
     const {data: skills} = await supabase.from('skills').select('*');
