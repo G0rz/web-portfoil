@@ -13,7 +13,7 @@ export default function Hero() {
                     height={250}
                 />
             </div>
-            <h1 className="text-4xl font-extrabold w-full">Leonardo Becerril</h1>
+            <h1 className="text-4xl font-extrabold w-full">  Leonardo Becerril  </h1>
             <strong className="text-lg w-full">Ingeniero en Sistemas Computacionales</strong>
         </div>
     )

@@ -68,6 +68,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+    <head>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+    </head>
     <body className={`${montserrat.variable} ${inter.variable} antialiased`}>
       <Providers>
           <NavigationBar/>

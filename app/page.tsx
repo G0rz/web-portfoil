@@ -13,7 +13,6 @@ export default async function Home() {
 
 
     return (<main className={"sm:mx-auto w-full sm:w-2/4 min-h-screen pb-12 px-6"}>
-
             <Hero />
             <TechStack skills={skills} />
             <div className={"flex flex-wrap w-full my-8 gap-4"}>
