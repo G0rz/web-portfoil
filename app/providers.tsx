@@ -11,6 +11,7 @@ export function Providers({children}: { children: React.ReactNode }) {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service_worker.js').then(registration => {
+                    console.log('SW registered: ', registration);
                 }).catch(registrationError => {
                     console.log('SW registration failed: ', registrationError);
                 });
@@ -20,7 +21,7 @@ export function Providers({children}: { children: React.ReactNode }) {
 
     return (
         <HeroUIProvider>
-            <NextThemesProvider attribute="class" enableSystem={true}>
+            <NextThemesProvider attribute="class" defaultTheme="light">
             <ToastProvider />
             {children}
             </NextThemesProvider>
