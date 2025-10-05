@@ -2,7 +2,6 @@ import {Button, Link, NavbarItem} from "@heroui/react";
 import {GithubIcon} from "@/components/icons/GithubIcon";
 import {LinkedinIcon} from "@/components/icons/LinkedinIcon";
 import React from "react";
-import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 
 export default function SocialLinks() {
     return (
@@ -23,9 +22,6 @@ export default function SocialLinks() {
                         aria-label="LinkedIn/TypeNull" color="default" variant="light" radius="full">
                     <LinkedinIcon fill={"currentColor"} size={32}/>
                 </Button>
-            </NavbarItem>
-            <NavbarItem>
-                <ThemeSwitcher/>
             </NavbarItem>
         </>
     )
