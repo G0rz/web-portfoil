@@ -14,8 +14,8 @@ export interface SkillProps {
     id: number;
     created_at: string;
     name: string | null;
-    color: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | null;
-    variant: "solid" | "bordered" | "light" | null;
+    color: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | undefined;
+    variant: "flat" | "solid" | "bordered" | "light" | "faded" | "shadow" | "dot" | undefined;
     active: boolean | null;
 }
 

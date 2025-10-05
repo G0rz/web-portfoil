@@ -3,7 +3,6 @@ import TabsComponent from "@/components/TabsComponent";
 import {getEducation, getJobs, getResponsibilitiesGoals, getSkills} from "@/app/lib/data";
 import Hero from "@/components/Hero";
 import TechStack from "@/components/TechStack";
-import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 
 export default async function Home() {
 

@@ -56,6 +56,7 @@ const ContactForm = () => {
                     });
                 });
         } catch (error) {
+            console.log(error)
             addToast({
                 title: "Ocurrió un problema 💀",
                 description: "Intenta contactarme por algún otro medio...",

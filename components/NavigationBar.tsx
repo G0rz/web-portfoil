@@ -24,7 +24,7 @@ export default function NavigationBar() {
         if (isMenuOpen) {
             setIsMenuOpen(false);
         }
-    }, [pathname]);
+    }, [isMenuOpen, pathname]);
 
     return (
         <Navbar shouldHideOnScroll={true} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
