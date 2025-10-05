@@ -1,32 +1,24 @@
 import type {Metadata} from "next";
-import {Montserrat, Open_Sans, Roboto} from "next/font/google";
+import {Montserrat, Inter} from "next/font/google";
 import "./globals.css";
 import {Providers} from "@/app/providers";
-import NavigationBar from "@/components/navigation-bar";
+import NavigationBar from "@/components/NavigationBar";
 import React from "react";
+import {siteConfig} from "@/config/site";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
-    variable: "--font-family",
-  subsets: ["latin"],
-});
-
-const roboto = Roboto({
-    variable: "--font-family",
-  subsets: ["latin"],
-});
-
-const openSans = Open_Sans({
-    variable: "--font-family",
+    variable: "--font-heading",
     subsets: ["latin"],
 });
 
-const siteConfig = {
-    name: "Leonardo Becerril | Software Engineer",
-    description: "Portfolio of Leonardo Becerril, a passionate Software Engineer specializing in building modern web applications with Next.js, TypeScript, and Tailwind CSS.",
-    url: "https://leonardobecerril.dev"
-};
+const inter = Inter({
+    variable: "--font-body",
+    subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   metadataBase: new URL(siteConfig.url),
     title: {
     default: siteConfig.name,
@@ -35,7 +27,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
       "Leonardo Becerril",
-      "Software Engineer",
+      "Ingeniero en Sistemas Computacionales",
       "Web Developer",
       "Portfolio",
       "Next.js",
@@ -75,11 +67,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <body className={`${montserrat.variable} ${roboto.variable} ${openSans.variable} antialiased`}>
+    <html lang="es">
+    <body className={`${montserrat.variable} ${inter.variable} antialiased`}>
       <Providers>
           <NavigationBar/>
           {children}
+          <Footer />
       </Providers>
       </body>
     </html>
